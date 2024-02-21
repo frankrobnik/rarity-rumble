@@ -1,25 +1,25 @@
-import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { component$ } from '@builder.io/qwik';
+import { Link, type DocumentHead } from '@builder.io/qwik-city';
+import ImgBackground from '~/media/Background-2.webp?jsx';
+import styles from './index.module.css';
 
 export default component$(() => {
   return (
-    <>
-      <h1>Hi 👋</h1>
-      <p>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </p>
-    </>
+    <div class={styles.container}>
+      <ImgBackground class={styles.background} alt="game cover art" />
+      <Link href="/rumble" class={styles.button}>
+        Start Rumble
+      </Link>
+    </div>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: 'Rarity Rumble: Top Value Showdown',
   meta: [
     {
-      name: "description",
-      content: "Qwik site description",
+      name: 'description',
+      content: 'Example app written to learn Qwik (JS).',
     },
   ],
 };

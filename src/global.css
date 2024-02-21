@@ -1,0 +1,42 @@
+:root {
+  --bg-color: #fadeac;
+  --text-color: #302932;
+  --link-color: #d04f27;
+  --link-hover-color: #df5630;
+  --button-hover-color: #2a070d;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Patua One', system-ui;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--link-color);
+}
+
+.logo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0 auto;
+  max-width: max-content;
+}
+
+.logo img {
+  max-width: calc(100dvw - 6rem);
+  height: auto;
+}
+
+.container {
+  margin: 3rem auto 6rem;
+  max-width: 64rem;
+}
+
+figure {
+  margin: 0 auto;
+}

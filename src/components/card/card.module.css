@@ -1,0 +1,42 @@
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  border-radius: 12px;
+}
+
+.card figcaption {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 0.125rem underline var(--text-color);
+  border-style: inset;
+}
+
+.price {
+  font-size: 1.5rem;
+}
+
+.priceLabel {
+  font-size: 0.75rem;
+}
+
+.dummy {
+  flex: 1;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dummy div {
+  display: block;
+  margin: 0 auto;
+  width: 244px;
+  height: 340px;
+  background: var(--text-color);
+  border-radius: 12px;
+  opacity: 0.25;
+}

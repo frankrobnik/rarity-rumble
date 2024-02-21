@@ -1,0 +1,101 @@
+.options {
+  margin: 4rem 1rem 0;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.options button {
+  display: block;
+  margin: 0 auto;
+  width: 244px;
+  height: 340px;
+  padding: 0;
+  background: var(--link-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.options button figure {
+  transition: transform 0.8s cubic-bezier(0, 1.2, 0, 1);
+}
+
+.options button:hover figure {
+  border-radius: 12px;
+  box-shadow:
+    rgba(0, 0, 0, 0.07) 0px 1px 2px,
+    rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px,
+    rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px,
+    rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.options div button:focus figure,
+.options div button:hover figure {
+  transform: translateY(-7rem) rotate(20deg);
+}
+
+.options div:not(:last-child) button:focus figure,
+.options div:not(:last-child) button:hover figure {
+  transform: translateY(-7rem) rotate(-20deg);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 0.2rem var(--text-color) solid;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  transition: all 0.05s ease-out 0s;
+}
+
+@keyframes rumble {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: translate(2px, 0px) rotate(-1deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translate(-1px, -2px) rotate(0deg);
+  }
+  80% {
+    -webkit-transform: translate(1px, 1px) rotate(1deg);
+  }
+  100% {
+    -webkit-transform: translate(2px, -1px) rotate(-1deg);
+  }
+}
+
+.button:hover,
+.button:focus {
+  animation: rumble 0.35s infinite linear;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border-color: var(--bg-color);
+}
+
+@media (min-width: 40rem) {
+  .button {
+    font-size: 2rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

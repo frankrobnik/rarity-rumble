@@ -1,6 +1,6 @@
 {
-  "name": "my-qwik-empty-starter",
-  "description": "App with Routing built-in ready to create your app",
+  "name": "rarity-rumble",
+  "description": "Demo app to try out qwik.",
   "engines": {
     "node": ">=15.0.0"
   },
@@ -38,5 +38,8 @@
     "undici": "*",
     "vite": "^5.0.12",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "@fontsource/patua-one": "^5.0.18"
   }
 }
