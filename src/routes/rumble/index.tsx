@@ -14,7 +14,8 @@ import {
 } from '~/components/card/card';
 import { Trades } from '~/components/trades/trades';
 import styles from './index.module.css';
-import { GameOver } from '~/components/card/game-over/game-over';
+import { GameOver } from '~/components/game-over/game-over';
+import { type DocumentHead } from '@builder.io/qwik-city';
 
 export type GameStore = {
   level: number;
@@ -155,3 +156,13 @@ export default component$(() => {
     </div>
   );
 });
+
+export const head: DocumentHead = {
+  title: 'Rarity Rumble: Top Value Showdown',
+  meta: [
+    {
+      name: 'description',
+      content: 'Example app written to learn Qwik (JS).',
+    },
+  ],
+};
